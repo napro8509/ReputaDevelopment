@@ -1,0 +1,65 @@
+#header-carousel {
+  .carousel-control-prev, .carousel-control-next {
+    opacity: 0.3;
+    width: 10%;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-image: none;
+    font-size: 30px;
+  }
+  .carousel-control-next{
+    i{
+      color: $cl-blue;
+    }
+  }
+  .carousel-indicators li{
+    background-color: $cl-blue-light;
+    &.active{
+      background-color: $cl-blue;
+    }
+  }
+  .carousel-caption {
+    text-align: left;
+    top: 15%;
+    width: 35%;
+
+    h5 {
+      font-family: Muli;
+      font-size: 48px;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+    p {
+      font-family: Roboto;
+      font-size: 20px;
+      margin-bottom: 0px;
+      color: $cl-blue-light;
+      width: 70%;
+    }
+    .action {
+      position: relative;
+      &:before {
+        content: url($baseUrl + '/media/icon/arrow.png');
+        position: absolute;
+        left: -110px;
+        bottom: 65px;
+      }
+      p{
+        margin-top: 50px;
+        margin-bottom: 5px;
+        font-family: Muli;
+        font-size: 22px;
+        font-style: italic;
+      }
+    }
+  }
+  .slide-img {
+    position: absolute;
+    bottom: 15%;
+    right: 12%;
+    width: 35%;
+  }
+}

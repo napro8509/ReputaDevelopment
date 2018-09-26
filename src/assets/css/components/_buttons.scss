@@ -1,0 +1,115 @@
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.db-btn {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  z-index: 1;
+  border: none;
+  border-radius: 2px;
+  color: $cl-white;
+  font-size: 12px;
+  padding: 9px 18px;
+  font-weight: 300;
+  &:hover {
+    color: $cl-white;
+
+    &:before {
+      left: 0%;
+      right: auto;
+      width: 100%;
+    }
+  }
+
+  &.btn-round {
+    &:before {
+      border-radius: 30px;
+    }
+  }
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    border-radius: 2px;
+    content: '';
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+}
+
+.db-btn-outline {
+  background-color: $cl-white;
+  color: $cl-cyan-light;
+  box-shadow: 0 0 0 1px #E0E8F7;
+
+  &:hover {
+    color: $cl-white;
+    box-shadow: 0 0 0 1px $cl-cyan-light;
+
+    &:before {
+      left: 0%;
+      right: auto;
+      width: 100%;
+    }
+
+    &:before {
+      background: $cl-cyan-light;
+    }
+  }
+}
+
+.db-btn-lg {
+  font-size: 20px;
+  padding: 9px 20px;
+}
+
+.btn-round {
+  background-image: linear-gradient(to right, #45C7DF, #50DBD6);
+  border-radius: 30px;
+  padding: 5px 20px;
+  padding-right: 9px;
+  color: $cl-white;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  span {
+    display: inline-block;
+    margin-left: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: $cl-white;
+    padding: 8px 8px 8px 10px;
+    i {
+      color: $cl-cyan-light;
+    }
+  }
+
+  &:hover {
+    color: $cl-white;
+  }
+}
+
+.btn-block{
+  display: block;
+  width: 100%;
+}
+
+
+@include db-buttons($btn-names, $btn-colors);
+@each $name, $color in $button-colors {
+  @include btn-color($name, $color);
+}

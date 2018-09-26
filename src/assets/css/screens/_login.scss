@@ -1,0 +1,131 @@
+html, body {
+  font-family: Roboto;
+}
+
+body.authenticate {
+  background-color: $cl-blue;
+  background-image: url($baseUrl + "media/image/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  #root {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.login-form {
+  width: $login-width;
+  .login-header {
+    position: relative;
+    border-radius: 6px 6px 0 0;
+    background: $cl-white; /* fallback */
+    background: radial-gradient(circle at top left, transparent 0, $cl-white 0) top left,
+    radial-gradient(circle at top right, transparent 0, $cl-white 0) top right,
+    radial-gradient(circle at bottom left, transparent 9px, $cl-white 0) bottom left,
+    radial-gradient(circle at bottom right, transparent 9px, $cl-white 0) bottom right;
+    background-size: 52% 52%;
+    background-repeat: no-repeat;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin: 0 auto;
+
+    .logo {
+      text-align: center;
+      display: block;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 9px;
+      width: calc(100% - 18px);
+      height: 1px;
+      border-top: 1px dashed #DADADA;
+    }
+  }
+  .login-content {
+    position: relative;
+    background-color: $cl-gray-4;
+    background: radial-gradient(circle at top left, transparent 9px, $cl-gray-4 0) top left,
+    radial-gradient(circle at top right, transparent 9px, $cl-gray-4 0) top right,
+    radial-gradient(circle at bottom left, transparent 0, $cl-gray-4 0) bottom left,
+    radial-gradient(circle at bottom right, transparent 0, $cl-gray-4 0) bottom right;
+    background-size: 52% 52%;
+    background-repeat: no-repeat;
+    padding: 20px 32px 60px 32px;
+    border-radius: 0 0 6px 6px;
+
+    .form-control {
+      margin-bottom: 14px;
+      height: 52px;
+      font-size: 16px;
+      font-family: $font-helvetica-neue;
+    }
+
+    .btn {
+      margin: 28px 0;
+      height: 54px;
+      font-size: 18px;
+      font-family: $font-helvetica-neue;
+    }
+    .forgot-link {
+      text-align: center;
+      display: block;
+      font-family: $font-helvetica-neue;
+      font-size: 15px;
+      color: $cl-blue-3;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .login-bg {
+    position: absolute;
+    height: 100%;
+    border-radius: 8px;
+  }
+  .login-bg-1 {
+    bottom: -10px;
+    width: calc(100% - 2 * 9px);
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    left: 9px;
+  }
+  .login-bg-2 {
+    bottom: -10px * 2;
+    width: calc(100% - 4 * 9px);
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -2;
+    left: 2* 9px;
+  }
+  .login-bg-3 {
+    bottom: -10px * 3;
+    width: calc(100% - 6 * 9px);
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -3;
+    left: 3*9px;
+  }
+}
+
+.footer-text {
+  margin-top: 60px;
+  color: $cl-white;
+  text-align: center;
+  display: none;
+  font-weight: 400;
+  a {
+    color: $cl-white;
+  }
+
+  &.footer-fix {
+    position: absolute;
+    bottom: 20px;
+    display: block;
+  }
+}

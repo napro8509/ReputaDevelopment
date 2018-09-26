@@ -1,0 +1,19 @@
+@mixin db-button($name, $color) {
+  .db-btn-#{$name} {
+    background-color: $color;
+  }
+}
+
+@mixin db-buttons($btn-names, $btn-colors) {
+  @each $name in $btn-names {
+    $i: index($btn-names, $name);
+    @include db-button($name, nth($btn-colors, $i));
+  }
+}
+
+@mixin btn-color($name, $color) {
+  .btn-#{$name} {
+    background-color: $color;
+    border-color: $color;
+  }
+}

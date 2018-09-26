@@ -1,0 +1,36 @@
+$cl-black: #000;
+$cl-black-light: #272727;
+$cl-black-lighter: #3E3549;
+
+$cl-gray: #84ABC6;
+$cl-gray-1: #6782A4;
+$cl-gray-2: #5E5E7A;
+$cl-gray-3: #292B63;
+$cl-gray-4: #f2f5ff;
+
+$cl-white: #fff;
+
+$cl-cyan: #00A4C8;
+$cl-cyan-light: #05B6C5;
+$cl-cyan-lighter: #39F3FF;
+$cl-cyan-bold: #048894;
+$cl-cyan-bg: #eef7f9;
+
+$cl-blue: #394ACE;
+$cl-blue-1: #4F85EA;
+$cl-blue-2: #4A78E3;
+$cl-blue-3: #547DD7;
+$cl-blue-light: #B1CAFF;
+$cl-blue-bold: #4C75D1;
+
+$cl-indigo: #006299;
+$cl-indigo-light: #235275;
+$cl-indigo-bold: #45676A;
+$cl-indigo-black: #5D40A6;
+
+$btn-names: 'indigo', 'blue', 'blue-bold';
+$btn-colors: $cl-indigo, $cl-blue, $cl-blue-bold;
+
+$button-colors: (
+        blue-bold: $cl-blue-bold
+);

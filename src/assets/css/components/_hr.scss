@@ -1,0 +1,13 @@
+.hr{
+  width: 160px;
+  height: 5px;
+  border-radius: 3px;
+  margin: 0 auto 20px auto;
+
+  &.blue{
+    background-color: $cl-blue-1;
+  }
+  &.cyan{
+    background-color: $cl-cyan-lighter;
+  }
+}
